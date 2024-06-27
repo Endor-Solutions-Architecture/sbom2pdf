@@ -11,4 +11,4 @@ pip install -r requirements.txt
 python3 main.py <your_cyclonedx.json>
 ```
 
-This will then create a PDF called your_filename.pdf
+This will then create a PDF called pdf_conversions/your_filename.pdf
