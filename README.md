@@ -8,7 +8,7 @@ Step 1: run
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python3 main.py <your_cyclonedx.json>
+python3 main.py <your_cyclonedx.json> or <a directory path with sbom.json files inside>
 ```
 
 This will then create a PDF called pdf_conversions/your_filename.pdf
