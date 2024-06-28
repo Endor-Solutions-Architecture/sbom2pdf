@@ -3,6 +3,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, Indenter
 import pandas as pd
+import os
 
 def create_summary_table(json_data, json_path):
     # Extract necessary metadata
@@ -11,7 +12,7 @@ def create_summary_table(json_data, json_path):
     
     summary_data = [
         ['Item', 'Details'],
-        ['SBOM File', json_path],
+        ['SBOM File', os.path.basename(json_path)],
         ['SBOM Type', json_data.get('bomFormat', '')],
         ['Version', json_data.get('specVersion', '')],
         ['Name', component.get('name', '')],
